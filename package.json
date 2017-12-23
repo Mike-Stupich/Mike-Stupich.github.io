@@ -1,7 +1,15 @@
 {
   "name": "react_website",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Mike Stupich",
+    "email": "mike.stupich@gmail.com"
+  },
+  "description": "Personal website built using react-redux",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/Mike-Stupich/React_Website.git"
+  },
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
