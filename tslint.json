@@ -1,9 +1,7 @@
 {
 	"defaultSeverity": "error",
 	"extends": [
-		"tslint:recommended", 
-		"tslint-config-prettier", 
-		"tslint-react"
+		"tslint:recommended"
 	],
 	"rules": {
 		"no-unused-expression": true,
@@ -20,6 +18,7 @@
 		"no-unnecessary-type-assertion": true,
 		"no-duplicate-imports": true,
 		"ordered-imports": true,
-		"interface-name": false
+		"interface-name": false,
+		"quotemark":false
 	}
 }
