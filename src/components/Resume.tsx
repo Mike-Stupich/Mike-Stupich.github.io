@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 class Resume extends React.Component<any, any> {
-    public state = {  }
+    public state = {  };
     public render() {
         return (
             <div>

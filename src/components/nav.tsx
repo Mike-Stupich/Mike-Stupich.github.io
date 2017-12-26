@@ -32,6 +32,6 @@ const Nav = () => (
             </Menu>
         </Container>
     </Segment>
-)
+);
 
 export default Nav;

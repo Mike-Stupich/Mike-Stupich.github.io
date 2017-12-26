@@ -9,16 +9,17 @@
 		"no-unused-variable": true,
 		"curly": true,
 		"class-name": true,
-		"semicolon": false,
+		"semicolon": true,
 		"triple-equals": true,
 		"no-console": false,
-		"only-arrow-functions": [false],
+		"only-arrow-functions": [true],
 		"object-literal-sort-keys": [false],
 		"jsx-wrap-multiline": false,
 		"no-unnecessary-type-assertion": true,
 		"no-duplicate-imports": true,
 		"ordered-imports": true,
-		"interface-name": false,
+		"interface-name": true,
 		"quotemark":false
+		
 	}
 }

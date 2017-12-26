@@ -8,7 +8,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Nav />
-        <Home />
         <div className="App-header">
           <h2>Welcome to React</h2>
         </div>
