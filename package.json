@@ -11,10 +11,16 @@
     "url": "https://github.com/Mike-Stupich/React_Website.git"
   },
   "dependencies": {
+    "history": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
-    "react-scripts-ts": "2.8.0"
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts-ts": "2.8.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "semantic-ui-react": "^0.77.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
@@ -26,6 +32,7 @@
     "@types/jest": "^21.1.9",
     "@types/node": "^8.5.2",
     "@types/react": "^16.0.31",
-    "@types/react-dom": "^16.0.3"
+    "@types/react-dom": "^16.0.3",
+    "typescript": "^2.6.2"
   }
 }
