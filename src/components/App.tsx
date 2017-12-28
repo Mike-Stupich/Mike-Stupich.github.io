@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { Route, Router } from 'react-router';
 import { bindActionCreators } from 'redux';
 
+import Footer from './Footer';
 import Home from './Home';
 import Nav from './Nav';
 
@@ -27,6 +28,7 @@ class App extends React.Component<any, IAppState> {
         <div>
           <Nav text={this.state.navText}/>
           <Home />
+          <Footer />
         </div>
       </Router>
     </div>
