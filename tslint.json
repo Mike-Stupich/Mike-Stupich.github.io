@@ -19,7 +19,8 @@
 		"no-duplicate-imports": true,
 		"ordered-imports": true,
 		"interface-name": true,
-		"quotemark":false
+		"quotemark":false,
+		"trailing-comma":false
 		
 	}
 }

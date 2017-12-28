@@ -1,19 +1,48 @@
+import createBrowserHistory from 'history/createBrowserHistory';
 import * as React from 'react';
-import './App.css';
+import { connect } from 'react-redux';
+import { Route, Router } from 'react-router';
+import { bindActionCreators } from 'redux';
+
 import Home from './Home';
 import Nav from './Nav';
 
-class App extends React.Component {
+interface IAppState {
+  navText: string;
+}
+
+class App extends React.Component<any, IAppState> {
+  public static state: IAppState;
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+      navText: ''
+    };
+  }
   public render() {
-    return (
+    return(
       <div className="App">
-        <Nav />
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+      <Router history={createBrowserHistory()}>
+        <div>
+          <Nav text={this.state.navText}/>
+          <Home />
         </div>
-      </div>
+      </Router>
+    </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+
+});
+
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+
+}, dispatch);
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
