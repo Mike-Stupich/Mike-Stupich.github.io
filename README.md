@@ -1,2 +1,3 @@
 # React_Website
-Recreating my personal website using React-redux
+Recreating my personal website using React
+

@@ -20,7 +20,7 @@
 		"ordered-imports": true,
 		"interface-name": true,
 		"quotemark":false,
-		"trailing-comma":false
-		
+		"trailing-comma":false,
+		"no-empty-interface": false
 	}
 }

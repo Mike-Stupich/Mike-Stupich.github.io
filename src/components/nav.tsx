@@ -35,8 +35,11 @@ export default class Nav extends React.Component<INavProps, any> {
                     <Menu.Item as={Link} to='/projects'>
                         <Menu.Item>My Projects</Menu.Item>
                     </Menu.Item>
+                    <Menu.Item as={Link} to='/aboutme'>
+                        <Menu.Item>About Me</Menu.Item>
+                    </Menu.Item>
                     <Menu.Menu position='right'>
-                        <Menu.Item as={Link} to='https://github.com/Mike-Stupich/React_Website'>
+                        <Menu.Item as='a' href='https://github.com/Mike-Stupich/React_Website'>
                             <Menu.Item>Source Code</Menu.Item>
                         </Menu.Item>
                     </Menu.Menu>

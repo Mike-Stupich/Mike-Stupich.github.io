@@ -18,7 +18,7 @@ class App extends React.Component<any, IAppState> {
     super(props);
 
     this.state = {
-      navText: ''
+      navText: 'Nav Text'
     };
   }
   public render() {
@@ -26,8 +26,8 @@ class App extends React.Component<any, IAppState> {
       <div className="App">
       <Router history={createBrowserHistory()}>
         <div>
-          <Nav text={this.state.navText}/>
-          <Home />
+          <Nav text = ''/>
+          <Home greeting='Hello'/>
           <Footer />
         </div>
       </Router>
@@ -36,15 +36,4 @@ class App extends React.Component<any, IAppState> {
   }
 }
 
-const mapStateToProps = (state) => ({
-
-});
-
-const mapDispatchToProps = (dispatch) => bindActionCreators({
-
-}, dispatch);
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default App;

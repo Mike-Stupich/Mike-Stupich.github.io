@@ -11,5 +11,3 @@ class Resume extends React.Component<any, any> {
     }
 }
 export default Resume;
-
-// export default connect(, )();
