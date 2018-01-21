@@ -18,9 +18,13 @@ class AboutMe extends React.Component<IAboutMeProps, any> {
 
     public render() {
         return (
-            <div>
-
-            </div>
+            <Segment>
+                <Container>
+                    <Header
+                    as='h1'
+                    content='About Me'/>
+                </Container>
+            </Segment>
         );
     }
 }

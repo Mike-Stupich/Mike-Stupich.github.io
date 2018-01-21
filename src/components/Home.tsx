@@ -5,7 +5,7 @@ import HomeHeader from './HomeHeader';
 import ProjectDisplay from './ProjectDisplay';
 
 interface IHomeProps {
-    greeting: string;
+    greeting?: string;
 }
 
 interface IHomeState {

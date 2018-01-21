@@ -9,6 +9,7 @@ import {
 export default class Footer extends React.Component<{}, {}> {
     public render() {
         return (
+            <footer>
             <Segment
                 inverted
                 vertical
@@ -62,6 +63,7 @@ export default class Footer extends React.Component<{}, {}> {
                     </Grid>
                 </Container>
             </Segment>
+            </footer>
         );
     }
 }

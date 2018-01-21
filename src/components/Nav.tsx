@@ -1,12 +1,16 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
-import { Link, Route } from 'react-router-dom';
+import { Link, NavLink, Route } from 'react-router-dom';
 import {
     Container,
     Menu,
     Segment,
     Visibility
 } from 'semantic-ui-react';
+
+import AboutMe from './AboutMe';
+import Home from './Home';
+import Resume from './Resume';
 
 interface INavProps {
     text?: string;
@@ -30,8 +34,8 @@ export default class Nav extends React.Component<INavProps, INavState> {
 
     public render() {
         return (
-            <div>
-                {this.state.visible ? <this.FixedMenu /> : null }
+        <div>
+            {this.state.visible ? <this.FixedMenu /> : null }
             <Visibility
                 onBottomPassed={this.showFixedMenu}
                 onBottomVisible={this.hideFixedMenu}
@@ -46,10 +50,8 @@ export default class Nav extends React.Component<INavProps, INavState> {
                     <Container>
                         <Menu
                             inverted={true}
-                            pointing={true}
                             size='large'
                         >
-                            <Menu.Item>{this.props.text}</Menu.Item>
                             <Menu.Item as={Link} to='/'>
                                 <Menu.Item>Home</Menu.Item>
                             </Menu.Item>
@@ -59,7 +61,7 @@ export default class Nav extends React.Component<INavProps, INavState> {
                             <Menu.Item as={Link} to='/projects'>
                                 <Menu.Item>My Projects</Menu.Item>
                             </Menu.Item>
-                            <Menu.Item as={Link} to='/aboutme'>
+                            <Menu.Item as={Link} to='/aboutme' >
                                 <Menu.Item>About Me</Menu.Item>
                             </Menu.Item>
                             <Menu.Menu position='right'>
@@ -71,7 +73,7 @@ export default class Nav extends React.Component<INavProps, INavState> {
                     </Container>
                 </Segment>
             </Visibility>
-            </div>
+        </div>
         );
     }
     private hideFixedMenu = () => {
@@ -89,25 +91,25 @@ export default class Nav extends React.Component<INavProps, INavState> {
         fixed='top'
         size='large'
         >
-            <Menu.Item>{this.props.text}</Menu.Item>
-            <Menu.Item as={Link} to='/'>
-                <Menu.Item>Home</Menu.Item>
-            </Menu.Item>
-            <Menu.Item as={Link} to='/resume'>
-                <Menu.Item>Resume</Menu.Item>
-            </Menu.Item>
-            <Menu.Item as={Link} to='/projects'>
-                <Menu.Item>My Projects</Menu.Item>
-            </Menu.Item>
-            <Menu.Item as={Link} to='/aboutme'>
-                <Menu.Item>About Me</Menu.Item>
-            </Menu.Item>
-            <Menu.Menu position='right'>
-                <Menu.Item as='a' href='https://github.com/Mike-Stupich/React_Website'>
-                    <Menu.Item>Source Code</Menu.Item>
+            <Container>
+                <Menu.Item as={Link} to='/'>
+                    <Menu.Item>Home</Menu.Item>
                 </Menu.Item>
-            </Menu.Menu>
+                <Menu.Item as={Link} to='/resume'>
+                    <Menu.Item>Resume</Menu.Item>
+                </Menu.Item>
+                <Menu.Item as={Link} to='/projects'>
+                    <Menu.Item>My Projects</Menu.Item>
+                </Menu.Item>
+                <Menu.Item as={Link} to='/aboutme'>
+                    <Menu.Item>About Me</Menu.Item>
+                </Menu.Item>
+                <Menu.Menu position='right'>
+                    <Menu.Item as='a' href='https://github.com/Mike-Stupich/React_Website'>
+                        <Menu.Item>Source Code</Menu.Item>
+                    </Menu.Item>
+                </Menu.Menu>
+            </Container>
         </Menu>
     )
-
 }
