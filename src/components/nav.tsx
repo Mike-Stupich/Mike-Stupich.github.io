@@ -16,12 +16,21 @@ interface INavState {
 }
 
 export default class Nav extends React.Component<INavProps, INavState> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            visible: false
+        };
+    }
 
     public render() {
         return (
+            <div>
+                {this.state.visible ? <this.FixedMenu /> : null }
             <Visibility
                 onBottomPassed={this.showFixedMenu}
                 onBottomVisible={this.hideFixedMenu}
+                once={false}
             >
                 <Segment
                     inverted={true}
@@ -57,6 +66,7 @@ export default class Nav extends React.Component<INavProps, INavState> {
                     </Container>
                 </Segment>
             </Visibility>
+            </div>
         );
     }
     private hideFixedMenu = () => {

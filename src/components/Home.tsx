@@ -25,8 +25,8 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     // Get the dimensions of the user's screen on mount
     public componentDidMount() {
         this.setState({
-            width: '1340px',
-            height: '3440px'
+            width: '3440px',
+            height: '1440px'
         });
     }
 
