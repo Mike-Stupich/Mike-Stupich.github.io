@@ -1,3 +1,4 @@
+import * as propTypes from 'prop-types';
 import * as React from 'react';
 import { Link, Route } from 'react-router-dom';
 import {
@@ -8,7 +9,7 @@ import {
 } from 'semantic-ui-react';
 
 interface INavProps {
-    text: string;
+    text?: string;
 }
 
 interface INavState {
@@ -16,6 +17,10 @@ interface INavState {
 }
 
 export default class Nav extends React.Component<INavProps, INavState> {
+    public static propTypes = {
+        text: propTypes.string
+    };
+
     constructor(props) {
         super(props);
         this.state = {

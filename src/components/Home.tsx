@@ -1,40 +1,37 @@
-import { propTypes } from 'prop-types';
+import * as propTypes from 'prop-types';
 import * as React from 'react';
 
 import HomeHeader from './HomeHeader';
-import MyProjects from './MyProjects';
+import ProjectDisplay from './ProjectDisplay';
 
 interface IHomeProps {
     greeting: string;
 }
 
 interface IHomeState {
-    height: string;
-    width: string;
+    projectOrder: string[];
 }
 
+// TODO: Add something that will change the displayed projects depending on user
 class Home extends React.Component<IHomeProps, IHomeState> {
+    public static propTypes = {
+        greeting: propTypes.string
+    };
+
     constructor(props) {
         super(props);
         this.state = {
-            height: '0px',
-            width: '0px'
+            projectOrder: [
+                'typ3', 'discordBot', 'website'
+            ]
         };
-    }
-
-    // Get the dimensions of the user's screen on mount
-    public componentDidMount() {
-        this.setState({
-            width: '3440px',
-            height: '1440px'
-        });
     }
 
     public render() {
         return (
             <div>
-                <HomeHeader screenWidth={this.state.width} screenHeight={this.state.height}/>
-                <MyProjects />
+                <HomeHeader />
+                <ProjectDisplay orderOfProjects={this.state.projectOrder} />
             </div>
         );
     }

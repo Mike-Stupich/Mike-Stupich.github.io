@@ -1,4 +1,4 @@
-import { propTypes } from 'prop-types';
+import * as propTypes from 'prop-types';
 import * as React from 'react';
 import {
     Container,

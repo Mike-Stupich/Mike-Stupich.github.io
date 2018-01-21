@@ -1,4 +1,4 @@
-import { propTypes } from 'prop-types';
+import * as propTypes from 'prop-types';
 import * as React from 'react';
 import * as Dimensions from 'react-dimensions';
 import {
@@ -12,12 +12,27 @@ import {
 const Background = require('../assets/background.jpg');
 
 interface IHomeHeaderProps {
-    screenWidth: string;
-    screenHeight: string;
 }
 
 interface IHomeState {
 }
+
+const styles = {
+    backgroundStyle: {
+        backgroundImage: `url(${Background})`,
+        width: null,
+        height: null,
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
+    } as React.CSSProperties,
+    headerStyle: {
+        fontSize: '6em',
+        fontWeight: 'normal',
+        marginBottom: '5em',
+        marginTop: '5em',
+    }
+};
 
 class HomeHeader extends React.Component<IHomeHeaderProps, IHomeState> {
     constructor(props) {
@@ -26,22 +41,8 @@ class HomeHeader extends React.Component<IHomeHeaderProps, IHomeState> {
 
     public render() {
         // TODO: Fix sizing - This is reliant on marginTop and marginBottom of headerStyle
-        const styles = {
-            backgroundStyle: {
-                backgroundImage: `url(${Background})`,
-                width: null,
-                height: null,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center'
-            } as React.CSSProperties,
-            headerStyle: {
-                fontSize: '6em',
-                fontWeight: 'normal',
-                marginBottom: '5em',
-                marginTop: '5em',
-            }
-        };
+        // TODO: Change text font and color
+
         return (
             <div style={styles.backgroundStyle}>
                 <Container
