@@ -1,0 +1,60 @@
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Lato", "Open Sans", "Helvetica Neue", Helvetica,Arial,sans-serif;
+    color: #5C5C5C;
+    background-color: #fff;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:768px) {
+    .header-bg .header-bg-body .header-bg-text {
+        font-size: 14pt !important;
+    }
+}
+
+
+.header-bg .header-bg-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.header-bg .header-bg-body .brand-heading {
+    font-size: 50px;
+    padding-top: 8em;
+    padding-bottom: 8em;
+}
+
+.header-bg .header-bg-body .header-bg-arrow {
+    background-image: url(../assets/arrow_down.png);
+    text-align: center;
+    display: inline;
+}
+
+.header-bg .header-bg-body .header-bg-text {
+    font-size: 22px;
+}
+.header-bg {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../assets/background.jpg);
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+@media (min-width: 768px){
+.header-bg {
+    height: 100%;
+    padding: 0;
+}
+
+}

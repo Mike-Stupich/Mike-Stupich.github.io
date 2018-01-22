@@ -12,7 +12,6 @@ interface IHomeState {
     projectOrder: string[];
 }
 
-// TODO: Add something that will change the displayed projects depending on user
 class Home extends React.Component<IHomeProps, IHomeState> {
     public static propTypes = {
         greeting: propTypes.string

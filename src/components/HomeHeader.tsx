@@ -1,15 +1,18 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
 import * as Dimensions from 'react-dimensions';
+import * as Scroll from 'react-scroll';
 import {
+    Button,
     Container,
     Grid,
     Header,
     Image,
     Segment,
 } from 'semantic-ui-react';
-// TODO: Change to import syntax
-const Background = require('../assets/background.jpg');
+import Divider from 'semantic-ui-react/dist/commonjs/elements/Divider/Divider';
+
+const scroll = Scroll.animateScroll;
 
 interface IHomeHeaderProps {
 }
@@ -17,44 +20,40 @@ interface IHomeHeaderProps {
 interface IHomeState {
 }
 
-const styles = {
-    backgroundStyle: {
-        backgroundImage: `url(${Background})`,
-        width: null,
-        height: null,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-    } as React.CSSProperties,
-    headerStyle: {
-        fontSize: '6em',
-        fontWeight: 'normal',
-        marginBottom: '5em',
-        marginTop: '5em',
-    }
-};
-
 class HomeHeader extends React.Component<IHomeHeaderProps, IHomeState> {
     constructor(props) {
         super(props);
     }
+    public componentDidMount() {
+        Scroll.Events.scrollEvent.register('begin', (to, element)  => {
+            console.log("begin", arguments);
+        });
+        Scroll.Events.scrollEvent.register('end', (to, element) => {
+            console.log("end", arguments);
+        });
+        Scroll.scrollSpy.update();
+    }
+    public componentWillUnmount() {
+        Scroll.Events.scrollEvent.remove('begin');
+        Scroll.Events.scrollEvent.remove('end');
+    }
 
     public render() {
-        // TODO: Fix sizing - This is reliant on marginTop and marginBottom of headerStyle
-        // TODO: Change text font and color
-
         return (
-            <div style={styles.backgroundStyle}>
-                <Container
-                text
-                >
-                <Header
-                    as='h1'
-                    content='Welcome to my website!'
-                    inverted={true}
-                    style={styles.headerStyle}/>
-                </Container>
-            </div>
+            <header className='header-bg'>
+                <div className='header-bg-body'>
+                    <Container>
+                        <Header
+                            className='brand-heading'
+                            content='Welcome to my website!'
+                            inverted={true}
+                        />
+                        <Button onClick={() => scroll.scrollTo(1000)}
+                            className='header-bg-arrow'
+                        >Scroll down to my work</Button>
+                    </Container>
+                </div>
+            </header>
         );
     }
 }

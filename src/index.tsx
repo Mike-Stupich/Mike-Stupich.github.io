@@ -5,6 +5,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Route, Router } from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css';
 import App from './components/App';
+require('./css/stylesheet.css');
 // import { Provider } from 'react-redux';
 // import store from './store';
 

@@ -13,7 +13,7 @@ export default class Footer extends React.Component<{}, {}> {
             <Segment
                 inverted
                 vertical
-                style={{ padding: '5em 0em' }}
+                style={{ padding: '5em 0em'}}
             >
                 <Container>
                     <Grid

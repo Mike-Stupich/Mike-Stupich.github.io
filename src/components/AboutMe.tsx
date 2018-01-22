@@ -7,6 +7,8 @@ import {
     Segment,
 } from 'semantic-ui-react';
 
+import DescriptorBox from './DescriptorBox';
+
 interface IAboutMeProps {
 
 }
@@ -20,13 +22,23 @@ class AboutMe extends React.Component<IAboutMeProps, any> {
         return (
             <Segment>
                 <Container>
-                    <Header
-                    as='h1'
-                    content='About Me'/>
+                    <Grid
+                    container
+                    verticalAlign='middle'
+                    textAlign='justified'
+                    >
+                    <DescriptorBox descriptorContent={this.info()} />
+                    </Grid>
                 </Container>
             </Segment>
         );
     }
+
+    private info = () => ({
+        title: 'A bit about me',
+        content: ``,
+        image: require('../assets/MyPhoto.jpg')
+    })
 }
 
 export default AboutMe;

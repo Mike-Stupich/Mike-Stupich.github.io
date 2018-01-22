@@ -10,17 +10,10 @@ import {
     Segment,
 } from 'semantic-ui-react';
 
-import DescriptorBox from './DescriptorBox';
+import DescriptorBox, { IContent } from './DescriptorBox';
 
 interface IProjectProps {
     projectName: string;
-}
-
-export interface IContent {
-    title: string;
-    link: string;
-    content: string;
-    imagePath: string;
 }
 
 const styles = {
@@ -76,7 +69,7 @@ class Project extends React.Component<IProjectProps, any> {
                     The command-line tool will build a .ts file from your Ethereum ABI file, which will allow vscode
                     to help you with type inferencing, and typ3 is a wrapper for making calls to an Ethereum node
                     This tool was created at the ETHWaterloo hackathon.`,
-                imagePath: typ3Png
+                image: typ3Png
             }
         );
     }
@@ -89,7 +82,7 @@ class Project extends React.Component<IProjectProps, any> {
                 link: 'https://github.com/Mike-Stupich/React_Website',
                 content: `My personal website, built using Reactjs. This project is an intro
                 to Reactjs for myself, to learn some the features it has to offer.`,
-                imagePath: websitePng
+                image: websitePng
             }
         );
     }
@@ -104,7 +97,7 @@ class Project extends React.Component<IProjectProps, any> {
                 of our servers cryptocurrency needs. The bot is being used to query an API, as well
                 as holding user and server data, and displaying them on user commands and timers.
                 This bot has been setup on Heroku, and uses MongoDB to store data.`,
-                imagePath: discoCryptoPng
+                image: discoCryptoPng
             }
         );
     }

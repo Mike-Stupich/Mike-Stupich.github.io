@@ -9,14 +9,20 @@ import {
 } from 'semantic-ui-react';
 
 import LinkButton from './LinkButton';
-import {IContent} from './Project';
+
+export interface IContent {
+    title: string;
+    link?: string;
+    content: string;
+    image: string;
+}
 
 interface IProps {
     descriptorContent: IContent;
 }
 
 interface IState {
-    image: string;
+
 }
 
 const styles = {
@@ -40,9 +46,9 @@ class DescriptorBox extends React.Component<IProps, IState> {
     public static propTypes = {
         descriptorContent: propTypes.shape({
             title: propTypes.string.isRequired,
-            link: propTypes.string.isRequired,
+            link: propTypes.string,
             content: propTypes.string.isRequired,
-            imagePath: propTypes.string.isRequired
+            image: propTypes.string.isRequired
         })
     };
 
@@ -51,31 +57,35 @@ class DescriptorBox extends React.Component<IProps, IState> {
     }
 
     public render() {
-        return (
-            <Grid.Row>
-                <Grid.Column width={8}>
-                    <Header
-                    as='h3'
-                    style={styles.headerStyle}
-                    content={this.props.descriptorContent.title}/>
-                    <p style={styles.pStyle}>
-                        {this.props.descriptorContent.content}
-                    </p>
-                    <LinkButton label={this.props.descriptorContent.title}
-                    link={this.props.descriptorContent.link}/>
-
-                </Grid.Column>
-                <Grid.Column floated='right' width={6}>
-                    <Image
-                        bordered
-                        rounded
-                        size='large'
-                        src={this.props.descriptorContent.imagePath}
-                    />
-                </Grid.Column>
-            </Grid.Row>
-        );
+            return (
+                <Grid.Row>
+                    <Grid.Column width={8}>
+                        <Header
+                            as='h3'
+                            style={styles.headerStyle}
+                            content={this.props.descriptorContent.title} />
+                        <p style={styles.pStyle}>
+                            {this.props.descriptorContent.content}
+                        </p>
+                        {this.linkPassedIn()}
+                    </Grid.Column>
+                    <Grid.Column floated='right' width={6}>
+                        <Image
+                            bordered
+                            rounded
+                            size='large'
+                            src={this.props.descriptorContent.image}
+                        />
+                    </Grid.Column>
+                </Grid.Row>
+            );
+        }
+    private linkPassedIn = () => {
+        if (this.props.descriptorContent.link) {
+            return <LinkButton label={this.props.descriptorContent.title}
+                link={this.props.descriptorContent.link} />;
+        }
+        return null;
     }
 }
-
 export default DescriptorBox;

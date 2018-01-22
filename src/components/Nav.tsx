@@ -58,9 +58,6 @@ export default class Nav extends React.Component<INavProps, INavState> {
                             <Menu.Item as={Link} to='/resume'>
                                 <Menu.Item>Resume</Menu.Item>
                             </Menu.Item>
-                            <Menu.Item as={Link} to='/projects'>
-                                <Menu.Item>My Projects</Menu.Item>
-                            </Menu.Item>
                             <Menu.Item as={Link} to='/aboutme' >
                                 <Menu.Item>About Me</Menu.Item>
                             </Menu.Item>
@@ -97,9 +94,6 @@ export default class Nav extends React.Component<INavProps, INavState> {
                 </Menu.Item>
                 <Menu.Item as={Link} to='/resume'>
                     <Menu.Item>Resume</Menu.Item>
-                </Menu.Item>
-                <Menu.Item as={Link} to='/projects'>
-                    <Menu.Item>My Projects</Menu.Item>
                 </Menu.Item>
                 <Menu.Item as={Link} to='/aboutme'>
                     <Menu.Item>About Me</Menu.Item>

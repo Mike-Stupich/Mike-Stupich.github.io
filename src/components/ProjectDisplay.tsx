@@ -22,10 +22,11 @@ interface IProjectDisplayState {
 
 const styles = {
     segmentStyle: {
-        padding: '8em 0em'
+        padding: '8em',
     },
     dividerStyle: {
-        margin: '3em 0em'
+        margin: '1em',
+        fontSize: '2em',
     }
 };
 
@@ -33,23 +34,33 @@ class ProjectDisplay extends React.Component<IProjectDisplayProps, IProjectDispl
     public static propTypes = {
         orderOfProjects: propTypes.arrayOf(propTypes.string).isRequired
     };
+
     constructor(props) {
         super(props);
     }
 
     public render() {
         return (
-            <Segment vertical style={styles.segmentStyle}>
-            <Grid
-            container
-            stackable
-            verticalAlign='middle'
-            textAlign='justified'
+            <Segment
+            vertical
+            style={styles.segmentStyle}
             >
-                {...this.determineOrder().map((name) => (
-                    <Project key={name} projectName={name}/>
-                ))}
-            </Grid>
+            <Divider
+            horizontal
+            style={styles.dividerStyle}
+            name='myWork'
+            content='Some of my work'>
+            </Divider>
+                <Grid
+                container
+                stackable
+                verticalAlign='middle'
+                textAlign='justified'
+                >
+                    {...this.determineOrder().map((name) => (
+                        <Project key={name} projectName={name}/>
+                    ))}
+                </Grid>
             </Segment>
         );
     }
