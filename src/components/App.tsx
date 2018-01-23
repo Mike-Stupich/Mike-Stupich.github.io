@@ -11,7 +11,7 @@ class App extends React.Component<any, any> {
   public render() {
     return(
       <div className="App">
-        <Nav />
+        {/* <Nav /> */}
         <Switch>
           <Route exact path='/' component={Home}/>
           <Route path='/aboutme' component={AboutMe}/>

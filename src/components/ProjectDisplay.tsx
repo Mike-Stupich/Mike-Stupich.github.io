@@ -12,11 +12,11 @@ import {
 
 import Project from './Project';
 
-interface IProjectDisplayProps {
+interface IProps {
     orderOfProjects: string[];
 }
 
-interface IProjectDisplayState {
+interface IState {
 
 }
 
@@ -29,8 +29,7 @@ const styles = {
         fontSize: '2em',
     }
 };
-
-class ProjectDisplay extends React.Component<IProjectDisplayProps, IProjectDisplayState> {
+class ProjectDisplay extends React.Component<IProps, IState> {
     public static propTypes = {
         orderOfProjects: propTypes.arrayOf(propTypes.string).isRequired
     };
@@ -46,9 +45,9 @@ class ProjectDisplay extends React.Component<IProjectDisplayProps, IProjectDispl
             style={styles.segmentStyle}
             >
             <Divider
+            name='projects'
             horizontal
             style={styles.dividerStyle}
-            name='myWork'
             content='Some of my work'>
             </Divider>
                 <Grid
