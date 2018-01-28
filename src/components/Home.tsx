@@ -1,11 +1,12 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
 
+import ExpertiseDisplay from './ExpertiseDisplay';
 import HomeHeader from './HomeHeader';
 import ProjectDisplay from './ProjectDisplay';
 
 interface IHomeProps {
-    greeting?: string;
+    toggleScrollMenu: any;
 }
 
 interface IHomeState {
@@ -14,7 +15,7 @@ interface IHomeState {
 
 class Home extends React.Component<IHomeProps, IHomeState> {
     public static propTypes = {
-        greeting: propTypes.string
+        toggleScrollMenu: propTypes.func.isRequired
     };
 
     constructor(props) {
@@ -29,7 +30,8 @@ class Home extends React.Component<IHomeProps, IHomeState> {
     public render() {
         return (
             <div>
-                <HomeHeader />
+                <HomeHeader toggleScrollMenu={this.props.toggleScrollMenu}/>
+                <ExpertiseDisplay />
                 <ProjectDisplay orderOfProjects={this.state.projectOrder} />
             </div>
         );

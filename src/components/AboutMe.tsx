@@ -9,11 +9,11 @@ import {
 
 import DescriptorBox from './DescriptorBox';
 
-interface IAboutMeProps {
+interface IProps {
 
 }
 
-class AboutMe extends React.Component<IAboutMeProps, any> {
+class AboutMe extends React.Component<IProps, any> {
     constructor(props) {
         super(props);
     }

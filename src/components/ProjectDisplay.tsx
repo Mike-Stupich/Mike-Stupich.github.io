@@ -1,6 +1,5 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
-import { Carousel } from 'react-responsive-carousel';
 import {
     Container,
     Divider,
@@ -22,7 +21,10 @@ interface IState {
 
 const styles = {
     segmentStyle: {
-        padding: '8em',
+        paddingTop: '2em',
+        paddingBottom: '2em',
+        paddingRight: '1em',
+        paddingLeft: '1em',
     },
     dividerStyle: {
         margin: '1em',
@@ -42,7 +44,7 @@ class ProjectDisplay extends React.Component<IProps, IState> {
         return (
             <Segment
             vertical
-            style={styles.segmentStyle}
+            className='segment'
             >
             <Divider
             name='projects'

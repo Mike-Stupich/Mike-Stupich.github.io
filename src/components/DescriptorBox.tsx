@@ -74,6 +74,7 @@ class DescriptorBox extends React.Component<IProps, IState> {
                             bordered
                             rounded
                             size='large'
+                            href={this.props.descriptorContent.link}
                             src={this.props.descriptorContent.image}
                         />
                     </Grid.Column>

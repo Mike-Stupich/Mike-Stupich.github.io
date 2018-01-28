@@ -2,29 +2,39 @@ import * as propTypes from 'prop-types';
 import * as React from 'react';
 import * as Dimensions from 'react-dimensions';
 import * as Scroll from 'react-scroll';
+import Typist from 'react-typist';
 import {
     Button,
     Container,
+    Divider,
     Grid,
     Header,
+    Icon,
     Image,
     Label,
     Segment,
+    Visibility
 } from 'semantic-ui-react';
-import Divider from 'semantic-ui-react/dist/commonjs/elements/Divider/Divider';
-import Icon from 'semantic-ui-react/dist/commonjs/elements/Icon/Icon';
 
 const scroll = Scroll.animateScroll;
 
 interface IProps {
+    toggleScrollMenu: any;
 }
 
 interface IState {
+    visibleArrow: boolean;
 }
 
 class HomeHeader extends React.Component<IProps, IState> {
+    public static propTypes = {
+        toggleScrollMenu: propTypes.func.isRequired
+    };
     constructor(props) {
         super(props);
+        this.state = {
+            visibleArrow: false
+        };
     }
     public componentDidMount() {
         Scroll.Events.scrollEvent.register('begin', (to, element)  => {
@@ -42,44 +52,74 @@ class HomeHeader extends React.Component<IProps, IState> {
 
     public render() {
         return (
+            <Visibility
+            // onBottomPassed={this.props.toggleScrollMenu(true)}
+            // onBottomVisible={this.props.toggleScrollMenu(false)}
+            once={false}
+            >
             <header className='splash'>
                 <Container className='splash-container'>
                     <div className='splash-body'>
-                        <Header
+                        <Typist
+                        startDelay={500}
+                        onTypingDone={this.showScroller}
+                        cursor={{
+                            show: false
+                        }}
+                        >
+                            <Header
                             className='splash-heading'
-                            content='Welcome to my website!'
-                            inverted={true}
-                        />
-                        <Scroll.Link
-                            className='splash-scroller'
-                            activeClass='active'
-                            to='projects'
-                            spy={true}
-                            smooth={true}
-                            offset={-100}
-                            duration={500}
-                            isDynamic={true}
+                            inverted
                             >
-                            <div>
-                                <Label
-                                className='scroller-label'
-                                content={`Scroll down to learn more!`}
-                                >
-                            </Label>
-                            </div>
-                            <div>
-                                <Icon
-                                className='scroller-icon'
-                                name='chevron down'
-                                color='black'
-                                />
-                            </div>
-                        </Scroll.Link>
+                            Hi, I'm Mike.
+                            </Header>
+                            <Typist.Delay ms={500}/>
+                            <Header
+                            className='splash-heading'
+                            inverted
+                            >
+                            Welcome to my website!
+                            </Header>
+                        </Typist>
+                        {this.state.visibleArrow ? <Scroller /> : null }
+
                     </div>
                 </Container>
             </header>
+            </Visibility>
         );
+    }
+    private showScroller = () => {
+        this.setState({
+            visibleArrow: true
+        });
     }
 }
 
+const Scroller = () => (
+        <Scroll.Link
+        className='splash-scroller'
+        activeClass='active'
+        to='projects'
+        spy={true}
+        smooth={true}
+        offset={-100}
+        duration={500}
+        isDynamic={true}
+        >
+        <div>
+            <Label
+            className='scroller-label'
+            content={`Scroll down to learn more!`}
+            >
+        </Label>
+        </div>
+        <div>
+            <Icon
+            className='scroller-icon'
+            name='chevron down'
+            />
+        </div>
+    </Scroll.Link>
+);
 export default HomeHeader;

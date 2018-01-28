@@ -45,7 +45,6 @@ html {
     z-index: 2;
     text-decoration: none;
 }
-
 @media(min-width:550px) {
     .splash .splash-body .splash-scroller {
         font-size: 1.7rem;
@@ -65,6 +64,7 @@ html {
     text-rendering: auto;
     font: normal normal normal 14px/1;
     transform: translate(0,0);  
+    color: white;
 }
 
 .splash .splash-container .splash-body .splash-heading {
@@ -102,4 +102,49 @@ html {
     -o-background-size: cover;
 }
 
+}
+
+.nav {
+    min-height: 50px;
+    background: transparent;
+}
+
+.nav .nav-header {
+    font-size: 2em;
+}
+
+.expertise {
+    background: lightgrey;
+}
+
+.expertise .expertise-divider {
+    margin: 1em;
+    font-size: 2em;
+}
+
+.expertise .expertise-grid {
+    padding: 1em;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+}
+
+
+.expertise .expertise-grid .expertise-header {
+    font-size: 2em;
+    text-align: center;
+    flex-grow: 0 !important;
+}
+
+.expertise .expertise-grid .expertise-p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 1em;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+.segment {
+    padding: 2em 2em 1em 1em;
 }
