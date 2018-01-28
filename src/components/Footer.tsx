@@ -3,66 +3,71 @@ import {
     Container,
     Grid,
     Header,
+    Icon,
     List,
     Segment
 } from 'semantic-ui-react';
-export default class Footer extends React.Component<{}, {}> {
+export default class Footer extends React.Component<any, any> {
     public render() {
         return (
             <footer>
-            <Segment
-                inverted
-                vertical
-                style={{ padding: '5em 0em'}}
-            >
-                <Container>
-                    <Grid
-                        divided
-                        inverted
-                        stackable
-                    >
-                        <Grid.Row>
-                            <Grid.Column width={6} floated='right'>
-                                <List
+                <Segment
+                    inverted
+                    vertical
+                    style={{ padding: '5em 0em'}}
+                >
+                    <Container>
+                        <Grid
+                            divided
+                            inverted
+                            stackable
+                        >
+                            <Grid.Row
+                            centered
+                            >
+                            <p>Created By Mike Stupich, 2018</p>
+                            </Grid.Row>
+                            <Grid.Row
+                            centered
+                            >
+                            <List
+                            link
+                            relaxed
+                            inverted
+                            horizontal
+                            >
+                                <List.Item
+                                as='a'
+                                href='https://github.com/Mike-Stupich'>
+                                    <Icon
+                                    name='github'
+                                    size='large'
                                     link
-                                    inverted
-                                    relaxed
-                                >
-                                    <List.Item >
-                                        <List.Icon name='github' size='large' verticalAlign='middle' />
-                                        <List.Content>
-                                            <List.Header as='a' href='https://github.com/Mike-Stupich'>
-                                            Github.com/Mike-Stupich</List.Header>
-                                        </List.Content>
-                                    </List.Item>
-                                    <List.Item >
-                                    <List.Icon name='mail' size='large' verticalAlign='middle' />
-                                        <List.Content>
-                                            <List.Header as='a' href='mailto:mike.stupich@gmail.com'>
-                                            mike.stupich@gmail.com</List.Header>
-                                        </List.Content>
-                                    </List.Item>
-                                    <List.Item >
-                                    <List.Icon name='linkedin' size='large' verticalAlign='middle' />
-                                        <List.Content>
-                                            <List.Header as='a' href='https://www.linkedin.com/in/mike-stupich/'>
-                                            Mike Stupich on LinkedIn</List.Header>
-                                        </List.Content>
-                                    </List.Item>
-                                </List>
-                            </Grid.Column>
-                            <Grid.Column width={6} floated='left'>
-                                <p>Welcome to my website! Please check out some of the work I have done,
-                                    and if you think I could be of help to you, send me an email at
-                                    <a href='mailto:mike.stupich@gmail.com'> mike.stupich@gmail.com </a>
-                                    or send me a message on
-                                    <a href='https://www.linkedin.com/in/mike-stupich/'> LinkedIn! </a>
-                                </p>
-                            </Grid.Column>
-                        </Grid.Row>
-                    </Grid>
-                </Container>
-            </Segment>
+                                    />
+                                </List.Item>
+                                <List.Item
+                                as='a'
+                                href='mailto:mike.stupich@gmail.com'>
+                                    <Icon
+                                    name='mail'
+                                    size='large'
+                                    link
+                                    />
+                                </List.Item>
+                                <List.Item
+                                as='a'
+                                href='https://www.linkedin.com/in/mike-stupich'>
+                                    <Icon
+                                    name='linkedin'
+                                    size='large'
+                                    link
+                                    />
+                                </List.Item>
+                            </List>
+                            </Grid.Row>
+                        </Grid>
+                    </Container>
+                </Segment>
             </footer>
         );
     }

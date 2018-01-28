@@ -100,7 +100,7 @@ const Scroller = () => (
         <Scroll.Link
         className='splash-scroller'
         activeClass='active'
-        to='projects'
+        to='expertise'
         spy={true}
         smooth={true}
         offset={-100}

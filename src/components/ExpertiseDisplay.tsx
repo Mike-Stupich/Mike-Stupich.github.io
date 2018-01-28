@@ -65,7 +65,7 @@ const expertiseContent = () => (
         {
             title: `CODE`,
             content: `I design code primarily with nodeJS and Typescript, however I have studied and coded
-            projects in many other languages, including Java, C, C++, Python and more. Along with that I am
+            projects in many other languages, including Java, C, C++, Python and more. Along with that, I am
             learning solidity, to develop DApps on the Ethereum blockchain.`
         },
         {
@@ -77,8 +77,8 @@ const expertiseContent = () => (
         {
             title: `EXPLORATION`,
             content: `I am constantly looking to increase my coding knowledge. I participate in hackathons,
-            I am always keeping an eye out for new exciting technologies, and I dabble in new technologies
-            as much as I am able to.`
+            I always have several ongoing personal projects, and I'm always keeping an eye out for exciting
+            new technologies to use.`
         }
     ]
 );
