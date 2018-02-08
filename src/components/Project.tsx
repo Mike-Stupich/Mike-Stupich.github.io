@@ -63,11 +63,11 @@ class Project extends React.Component<IProjectProps, any> {
             {
                 title: 'Typ3 and Typ3-cli',
                 link: 'https://github.com/Mike-Stupich/typ3',
-                content: `Typ3 and typ3-cli are developer tools used to facilitate interactions with a solidity contract
-                    when using Typescript, as well as fully typed rpc-calls. This is an Typescript alternative to
-                    web3.js.
-                    The command-line tool will build a .ts file from your Ethereum ABI file, which will allow vscode
-                    to help you with type inferencing, and typ3 is a wrapper for making calls to an Ethereum node
+                content: `Typ3 and Typ3-cli are developer tools used to facilitate interactions with a solidity contract
+                    when using Typescript, as well as provide fully typed rpc-calls.
+                    This is an Typescript alternative to web3.js.
+                    The command-line tool will build a .ts file from your Ethereum ABI file which will allow vscode
+                    to help you with type inferencing, and Typ3 is a wrapper for making calls to an Ethereum node.
                     This tool was created at the ETHWaterloo hackathon.`,
                 image: typ3Png
             }
@@ -80,7 +80,7 @@ class Project extends React.Component<IProjectProps, any> {
             {
                 title: 'My Personal Website',
                 link: 'https://github.com/Mike-Stupich/React_Website',
-                content: `My personal website, built using Reactjs. This project is an intro
+                content: `My personal website, built using ReactJS. This project is an intro
                 to Reactjs for myself, to learn some the features it has to offer.`,
                 image: websitePng
             }
@@ -93,9 +93,9 @@ class Project extends React.Component<IProjectProps, any> {
             {
                 title: 'Discord Bot',
                 link: 'https://github.com/HenryNguyen5/discoCrypto/',
-                content: `Worked with a friend to create a Discord Bot that facilitates several
-                of our servers cryptocurrency needs. The bot is being used to query an API, as well
-                as holding user and server data, and displaying them on user commands and timers.
+                content: `Collaborated with a friend to create a Discord Bot that facilitates several
+                of our Discord server's cryptocurrency needs. The bot is being used to query an API,
+                as well as holding user and server data, and displaying them on user commands and timers.
                 This bot has been setup on Heroku, and uses MongoDB to store data.`,
                 image: discoCryptoPng
             }

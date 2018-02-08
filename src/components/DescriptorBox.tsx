@@ -21,10 +21,6 @@ interface IProps {
     descriptorContent: IContent;
 }
 
-interface IState {
-
-}
-
 const styles = {
     headerStyle: {
         fontSize: '2em',
@@ -42,7 +38,7 @@ const styles = {
         paddingTop: '2em'
     },
 };
-class DescriptorBox extends React.Component<IProps, IState> {
+class DescriptorBox extends React.Component<IProps, {}> {
     public static propTypes = {
         descriptorContent: propTypes.shape({
             title: propTypes.string.isRequired,
@@ -67,7 +63,7 @@ class DescriptorBox extends React.Component<IProps, IState> {
                         <p style={styles.pStyle}>
                             {this.props.descriptorContent.content}
                         </p>
-                        {this.linkPassedIn()}
+                        {this.linkPassedIn}
                     </Grid.Column>
                     <Grid.Column floated='right' width={6}>
                         <Image

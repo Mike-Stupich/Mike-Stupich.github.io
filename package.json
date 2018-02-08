@@ -10,11 +10,13 @@
   "repository": {
     "url": "https://github.com/Mike-Stupich/React_Website.git"
   },
+  "homepage": "https://mike-stupich.github.io",
   "dependencies": {
     "@types/history": "^4.6.2",
     "@types/prop-types": "^15.5.2",
     "@types/react-native": "^0.52.1",
     "css-loader": "^0.28.9",
+    "gh-pages": "^1.1.0",
     "history": "^4.7.2",
     "react": "^16.2.0",
     "react-dimensions": "^1.3.1",
@@ -37,7 +39,9 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build"
   },
   "devDependencies": {
     "@types/jest": "^21.1.9",
