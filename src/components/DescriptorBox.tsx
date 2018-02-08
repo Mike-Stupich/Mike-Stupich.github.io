@@ -21,23 +21,6 @@ interface IProps {
     descriptorContent: IContent;
 }
 
-const styles = {
-    headerStyle: {
-        fontSize: '2em',
-    },
-    pStyle: {
-        fontSize: '1.33em',
-    },
-    imageStyle: {
-        height: null,
-        width: null,
-        display: 'flex',
-    },
-    columnStyle: {
-        paddingBottom: '2em',
-        paddingTop: '2em'
-    },
-};
 class DescriptorBox extends React.Component<IProps, {}> {
     public static propTypes = {
         descriptorContent: propTypes.shape({
@@ -58,9 +41,9 @@ class DescriptorBox extends React.Component<IProps, {}> {
                     <Grid.Column width={8}>
                         <Header
                             as='h3'
-                            style={styles.headerStyle}
+                            className='descriptor-box-header'
                             content={this.props.descriptorContent.title} />
-                        <p style={styles.pStyle}>
+                        <p className='descriptor-box-p'>
                             {this.props.descriptorContent.content}
                         </p>
                         {this.linkPassedIn}

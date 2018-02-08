@@ -148,3 +148,11 @@ html {
 .segment {
     padding: 2em 2em 1em 1em;
 }
+
+.descriptor-box-header {
+    font-size: 2em;
+}
+
+.descriptor-box-p {
+    font-size: 1.33em;
+}

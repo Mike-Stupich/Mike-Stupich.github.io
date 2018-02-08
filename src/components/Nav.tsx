@@ -39,10 +39,10 @@ export default class Nav extends React.Component<IProps, IState> {
 
     public componentDidMount() {
         Scroll.Events.scrollEvent.register('begin', (to, element)  => {
-            console.log("begin", arguments);
+            console.log("begin");
         });
         Scroll.Events.scrollEvent.register('end', (to, element) => {
-            console.log("end", arguments);
+            console.log("end");
         });
         Scroll.scrollSpy.update();
     }
