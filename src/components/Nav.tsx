@@ -1,6 +1,5 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
-import { Link, NavLink, Route } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import {
     Container,
@@ -9,9 +8,7 @@ import {
     Visibility
 } from 'semantic-ui-react';
 
-import AboutMe from './AboutMe';
 import Home from './Home';
-import Resume from './Resume';
 
 interface IProps {
     text?: string;
@@ -38,38 +35,28 @@ export default class Nav extends React.Component<IProps, IState> {
     }
 
     public componentDidMount() {
-        Scroll.Events.scrollEvent.register('begin', (to, element)  => {
-            console.log("begin");
-        });
-        Scroll.Events.scrollEvent.register('end', (to, element) => {
-            console.log("end");
-        });
         Scroll.scrollSpy.update();
-    }
-    public componentWillUnmount() {
-        Scroll.Events.scrollEvent.remove('begin');
-        Scroll.Events.scrollEvent.remove('end');
     }
 
     public render() {
         return (
-        <Scroll.Element name='top'>
-            {this.state.visible ? <this.TopMenu /> : <this.FixedMenu /> }
-            <Visibility
-             onBottomPassed={this.showFixedMenu}
-             onBottomVisible={this.hideFixedMenu}
-            once={false}
-            />
-        </Scroll.Element>
+            <Scroll.Element name='top'>
+                {this.state.visible ? <this.TopMenu /> : <this.FixedMenu />}
+                <Visibility
+                    onBottomPassed={this.showFixedMenu}
+                    onBottomVisible={this.hideFixedMenu}
+                    once={false}
+                />
+            </Scroll.Element>
         );
     }
     private FixedMenu = () => (
         <Menu
-        className='nav'
-        fixed='top'
-        size='large'
-        borderless
-        stackable
+            className='nav'
+            fixed='top'
+            size='large'
+            borderless
+            stackable
         >
             <Container>
                 <Scroll.Link
@@ -79,25 +66,53 @@ export default class Nav extends React.Component<IProps, IState> {
                     smooth={true}
                     duration={500}
                     isDynamic={true}
-                    >
-                <Menu.Item
-                header
-                content={'Mike Stupich'}
-                className='nav-header'>
-                </Menu.Item>
+                >
+                    <Menu.Item
+                        header
+                        content={'Mike Stupich'}
+                        className='nav-header'>
+                    </Menu.Item>
                 </Scroll.Link>
                 <Menu.Menu position='right'>
-                    <Menu.Item as={Link} to='/'>
-                        <Menu.Item>Home</Menu.Item>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='top'
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            <Menu.Item>Home</Menu.Item>
+                        </Scroll.Link>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/resume'>
+                    <Menu.Item as='a' download='Resume.pdf' href={require('../assets/resume-2017-12.pdf')}>
                         <Menu.Item>Resume</Menu.Item>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/aboutme'>
-                        <Menu.Item>About Me</Menu.Item>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='expertise'
+                            smooth={true}
+                            offset={-100}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            <Menu.Item>About Me</Menu.Item>
+                        </Scroll.Link>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/projects' >
-                        <Menu.Item>Projects</Menu.Item>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='projects'
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            <Menu.Item>Projects</Menu.Item>
+                        </Scroll.Link>
                     </Menu.Item>
                     <Menu.Item as='a' href='https://github.com/Mike-Stupich/React_Website'>
                         <Menu.Item>Source Code</Menu.Item>
@@ -109,7 +124,7 @@ export default class Nav extends React.Component<IProps, IState> {
 
     private TopMenu = () => (
         <Menu
-            style={{background: 'transparent'}}
+            style={{ background: 'transparent' }}
             className='nav'
             size='large'
             fixed='top'
@@ -125,25 +140,53 @@ export default class Nav extends React.Component<IProps, IState> {
                     smooth={true}
                     duration={500}
                     isDynamic={true}
-                    >
-                <Menu.Item
-                header
-                content={'Mike Stupich'}
-                className='nav-header'>
-                </Menu.Item>
+                >
+                    <Menu.Item
+                        header
+                        content={'Mike Stupich'}
+                        className='nav-header'>
+                    </Menu.Item>
                 </Scroll.Link>
                 <Menu.Menu position='right'>
-                        <Menu.Item as={Link} to='/'>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='top'
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
                             <Menu.Item>Home</Menu.Item>
-                        </Menu.Item>
-                    <Menu.Item as={Link} to='/resume'>
+                        </Scroll.Link>
+                    </Menu.Item>
+                    <Menu.Item as='a' download='Resume.pdf' href={require('../assets/resume-2017-12.pdf')}>
                         <Menu.Item>Resume</Menu.Item>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/aboutme' >
-                        <Menu.Item>About Me</Menu.Item>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='expertise'
+                            offset={-100}
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            <Menu.Item>About Me</Menu.Item>
+                        </Scroll.Link>
                     </Menu.Item>
-                    <Menu.Item as={Link} to='/projects' >
-                        <Menu.Item>Projects</Menu.Item>
+                    <Menu.Item as='a'>
+                        <Scroll.Link
+                            className='nav-scroller'
+                            activeClass='active'
+                            to='projects'
+                            smooth={true}
+                            duration={500}
+                            isDynamic={true}
+                        >
+                            <Menu.Item>Projects</Menu.Item>
+                        </Scroll.Link>
                     </Menu.Item>
                     <Menu.Item as='a' href='https://github.com/Mike-Stupich/React_Website'>
                         <Menu.Item>Source Code</Menu.Item>
@@ -152,6 +195,10 @@ export default class Nav extends React.Component<IProps, IState> {
             </Container>
         </Menu>
     )
+
+    // private serveResume = () => [
+
+    // ]
 
     private hideFixedMenu = () => {
         this.setState({

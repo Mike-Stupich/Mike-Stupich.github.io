@@ -9,30 +9,21 @@ interface IHomeProps {
     toggleScrollMenu: any;
 }
 
-interface IHomeState {
-    projectOrder: string[];
-}
-
-class Home extends React.Component<IHomeProps, IHomeState> {
+class Home extends React.Component<IHomeProps> {
     public static propTypes = {
         toggleScrollMenu: propTypes.func.isRequired
     };
 
     constructor(props) {
         super(props);
-        this.state = {
-            projectOrder: [
-                'typ3', 'discordBot', 'website'
-            ]
-        };
     }
 
     public render() {
         return (
             <div>
-                <HomeHeader toggleScrollMenu={this.props.toggleScrollMenu}/>
+                <HomeHeader toggleScrollMenu={this.props.toggleScrollMenu} />
                 <ExpertiseDisplay />
-                <ProjectDisplay orderOfProjects={this.state.projectOrder} />
+                <ProjectDisplay />
             </div>
         );
     }

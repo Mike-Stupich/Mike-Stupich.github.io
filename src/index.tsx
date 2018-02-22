@@ -8,8 +8,6 @@ import App from './components/App';
 require('./css/stylesheet.css');
 
 render(
-  <Router history={createBrowserHistory()}>
-     <App />
-  </Router>,
+  <App />,
   document.getElementById('root')
 );

@@ -37,55 +37,45 @@ class HomeHeader extends React.Component<IProps, IState> {
         };
     }
     public componentDidMount() {
-        Scroll.Events.scrollEvent.register('begin', (to, element)  => {
-            console.log("begin");
-        });
-        Scroll.Events.scrollEvent.register('end', (to, element) => {
-            console.log("end");
-        });
         Scroll.scrollSpy.update();
-    }
-    public componentWillUnmount() {
-        Scroll.Events.scrollEvent.remove('begin');
-        Scroll.Events.scrollEvent.remove('end');
     }
 
     public render() {
         return (
             <Visibility
-            // onBottomPassed={this.props.toggleScrollMenu(true)}
-            // onBottomVisible={this.props.toggleScrollMenu(false)}
-            once={false}
+                // onBottomPassed={this.props.toggleScrollMenu(true)}
+                // onBottomVisible={this.props.toggleScrollMenu(false)}
+                once={false}
             >
-            <header className='splash'>
-                <Container className='splash-container'>
-                    <div className='splash-body'>
-                        <Typist
-                        startDelay={500}
-                        onTypingDone={this.showScroller}
-                        cursor={{
-                            show: false
-                        }}
-                        >
-                            <Header
-                            className='splash-heading'
-                            inverted
+                <header className='splash'>
+                    <Container className='splash-container'>
+                        <div className='splash-body'>
+                            <Typist
+                                startDelay={500}
+                                onTypingDone={this.showScroller}
+                                cursor={{
+                                    show: false
+                                }}
                             >
-                            Hi, I'm Mike.
+                                <Header
+                                    className='splash-heading'
+                                    inverted
+                                >
+                                    Hi, I'm Mike.
                             </Header>
-                            <Typist.Delay ms={500}/>
-                            <Header
-                            className='splash-heading'
-                            inverted
-                            >
-                            Welcome to my website!
+                                <Typist.Delay ms={500} />
+                                <Header
+                                    className='splash-heading'
+                                    inverted
+                                >
+                                    Welcome to my website!
                             </Header>
-                        </Typist>
-                        {this.state.visibleArrow ? <Scroller /> : null }
+                            </Typist>
+                            {this.state.visibleArrow ? <Scroller /> : null}
 
-                    </div>
-                </Container>
-            </header>
+                        </div>
+                    </Container>
+                </header>
             </Visibility>
         );
     }
@@ -97,7 +87,7 @@ class HomeHeader extends React.Component<IProps, IState> {
 }
 
 const Scroller = () => (
-        <Scroll.Link
+    <Scroll.Link
         className='splash-scroller'
         activeClass='active'
         to='expertise'
@@ -106,18 +96,18 @@ const Scroller = () => (
         offset={-100}
         duration={500}
         isDynamic={true}
-        >
+    >
         <div>
             <Label
-            className='scroller-label'
-            content={`Scroll down to learn more!`}
+                className='scroller-label'
+                content={`Scroll down to learn more!`}
             >
-        </Label>
+            </Label>
         </div>
         <div>
             <Icon
-            className='scroller-icon'
-            name='chevron down'
+                className='scroller-icon'
+                name='chevron down'
             />
         </div>
     </Scroll.Link>
