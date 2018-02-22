@@ -1,9 +1,8 @@
 {
   "main.css": "static/css/main.07958e52.css",
   "main.css.map": "static/css/main.07958e52.css.map",
-  "main.js": "static/js/main.c68a1f44.js",
-  "main.js.map": "static/js/main.c68a1f44.js.map",
-  "static\\media\\MyPhoto.jpg": "static/media/MyPhoto.3979cfc1.jpg",
+  "main.js": "static/js/main.87db7cb8.js",
+  "main.js.map": "static/js/main.87db7cb8.js.map",
   "static\\media\\background.jpg": "static/media/background.af731c24.jpg",
   "static\\media\\cmc.png": "static/media/cmc.5b75f496.png",
   "static\\media\\flags.png": "static/media/flags.9c74e172.png",
@@ -12,6 +11,7 @@
   "static\\media\\icons.ttf": "static/media/icons.b06871f2.ttf",
   "static\\media\\icons.woff": "static/media/icons.fee66e71.woff",
   "static\\media\\icons.woff2": "static/media/icons.af7ae505.woff2",
+  "static\\media\\resume-2017-12.pdf": "static/media/resume-2017-12.ae7b0e52.pdf",
   "static\\media\\typ3.png": "static/media/typ3.1ac3dc7f.png",
-  "static\\media\\website.png": "static/media/website.788fd97c.png"
+  "static\\media\\website.png": "static/media/website.07f75200.png"
 }
