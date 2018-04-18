@@ -89,7 +89,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
 }
-@media (min-width: 550px){
+@media (min-width: 768px){
 .splash {
     background: url(../assets/background.jpg);   
     background-color: #000;
@@ -155,4 +155,15 @@ html {
 
 .descriptor-box-p {
     font-size: 1.33em;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        visibility: hidden;
+        clear: both;
+        float: left;
+        margin: 10px auto 5px 20px;
+        width: 28%;
+        display: none;
+    }
 }
