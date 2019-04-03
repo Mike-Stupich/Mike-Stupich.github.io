@@ -1,11 +1,7 @@
-import * as propTypes from 'prop-types';
 import * as React from 'react';
 import {
-    Container,
     Divider,
     Grid,
-    Header,
-    List,
     Segment,
 } from 'semantic-ui-react';
 

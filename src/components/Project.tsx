@@ -1,16 +1,6 @@
 import * as propTypes from 'prop-types';
 import * as React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import {
-    Button,
-    Container,
-    Grid,
-    Header,
-    Image,
-    Segment,
-} from 'semantic-ui-react';
-
-import DescriptorBox, { IContent } from './DescriptorBox';
+import DescriptorBox from './DescriptorBox';
 
 interface IProjectProps {
     projectName: string;

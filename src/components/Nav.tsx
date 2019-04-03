@@ -7,7 +7,6 @@ import {
     Segment,
     Visibility
 } from 'semantic-ui-react';
-
 import Home from './Home';
 
 interface IProps {
@@ -86,7 +85,7 @@ export default class Nav extends React.Component<IProps, IState> {
                             <Menu.Item>Home</Menu.Item>
                         </Scroll.Link>
                     </Menu.Item>
-                    <Menu.Item as='a' download='Resume.pdf' href={require('../assets/resume-2017-12.pdf')}>
+                    <Menu.Item as='a' download='Mike_Stupich_Resume.pdf' href={require('../assets/resume.pdf')}>
                         <Menu.Item>Resume</Menu.Item>
                     </Menu.Item>
                     <Menu.Item as='a'>
@@ -160,7 +159,7 @@ export default class Nav extends React.Component<IProps, IState> {
                             <Menu.Item>Home</Menu.Item>
                         </Scroll.Link>
                     </Menu.Item>
-                    <Menu.Item as='a' download='Resume.pdf' href={require('../assets/resume-2017-12.pdf')}>
+                    <Menu.Item as='a' download='Resume.pdf' href={require('../assets/resume.pdf')}>
                         <Menu.Item>Resume</Menu.Item>
                     </Menu.Item>
                     <Menu.Item as='a'>
