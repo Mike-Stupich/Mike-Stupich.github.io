@@ -64,21 +64,23 @@ const expertiseContent = () => (
     [
         {
             title: `CODE`,
-            content: `I design code primarily with nodeJS and Typescript, however I have studied and coded
-            projects in many other languages, including Java, C, C++, Python and more. Along with that, I am
-            learning solidity, to develop DApps on the Ethereum blockchain.`
+            content: `I design code primarily with node.js and TypeScript/JavaScript, however I have studied and coded
+            projects in many other languages, including Java, Kotlin, C++, C, Python, R and more. 
+            My web frameworks of choice are React and Redux, with d3.js for graphics.`
         },
         {
             title: `COLLABORATION`,
             content: `I have collaborated on several personal and school projects to deliver
             complete projects in a timely manner. These projects include a Discord bot,
-            a mining management software, an Android app and several more.`
+            a mining management software, an Android app and several more. I have also
+            worked in a small team to participate in two ETHGlobal Ethereum Hackathons.`
         },
         {
             title: `EXPLORATION`,
             content: `I am constantly looking to increase my coding knowledge. I participate in hackathons,
             I always have several ongoing personal projects, and I'm always keeping an eye out for exciting
-            new technologies to use.`
+            new technologies to use. Currently, I am learning Kotlin for Android apps
+            and working with C++ for Unreal Engine 4 development.`
         }
     ]
 );
