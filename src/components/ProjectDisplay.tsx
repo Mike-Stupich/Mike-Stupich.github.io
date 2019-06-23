@@ -50,7 +50,7 @@ class ProjectDisplay extends React.Component<{}> {
         // return (this.props.orderOfProjects
         //     ? this.props.orderOfProjects
         //     : ['typ3', 'discordBot', 'website']);
-        return ['typ3', 'discordBot', 'website'];
+        return ['typ3', 'discordBot', 'androidDev'];
     }
 }
 

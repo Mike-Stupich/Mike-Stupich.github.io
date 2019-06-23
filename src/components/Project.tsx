@@ -42,6 +42,8 @@ class Project extends React.Component<IProjectProps, any> {
                 return this.website();
             case 'discordBot':
                 return this.discordBot();
+            case 'androidDev':
+                return this.calcApp();
             default:
                 return null;
         }
@@ -88,6 +90,22 @@ class Project extends React.Component<IProjectProps, any> {
                 as well as holding user and server data, and displaying them on user commands and timers.
                 This bot has been setup on Heroku, and uses MongoDB to store data.`,
                 image: discoCryptoPng
+            }
+        );
+    }
+
+    private calcApp = () => {
+        const calcPng = require('../assets/calc.png');
+        return (
+            {
+                title: 'Kotlin Android Development',
+                link: 'https://github.com/Mike-Stupich/CalculatorApp',
+                content: `I am currently working through a Udemy intro into Android development course.
+                The course is in Java, so as I follow along I am recreating his lessons in Kotlin.
+                My first solo project since beginning to learn is a simple Calculator app.
+                The app itself is very simple, but I have found the development quite enjoyable
+                and very rewarding, and will keep creating new projects as my knowledge and skills progress.`,
+                image: calcPng
             }
         );
     }
